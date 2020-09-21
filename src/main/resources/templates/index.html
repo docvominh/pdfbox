@@ -1,0 +1,46 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/basic}">
+<head>
+    <title>Trang chủ</title>
+</head>
+<body>
+
+<div layout:fragment="main">
+    <div id="pageContent" class="home-page">
+        <div class="container">
+            <div class="hero home-welcome is-small">
+                <div class="hero-body">
+                    <h2 class="subtitle">
+                        Your house
+                        <i class="fas fa-home"></i>
+                        , my heart
+                        <i class="fa fa-heart"></i>
+                    </h2>
+                </div>
+
+            </div>
+        </div>
+        <br/>
+        <div class="container column container-top">
+            <div th:if="${info != null}">
+                <h1 th:text="${info.title}"></h1>
+                <h1 th:text="${info.subject}"></h1>
+                <h1 th:text="${info.producer}"></h1>
+                <h1 th:text="${info.creator}"></h1>
+            </div>
+
+
+            <h1><b>Form info</b></h1>
+            <div style="display: block" th:each="field : ${fields}">
+                <p th:text="${field}"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script layout:fragment="script">
+
+</script>
+</body>
+</html>

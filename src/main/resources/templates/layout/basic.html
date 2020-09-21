@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      class="has-navbar-fixed-top">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"/>
+        <link rel="stylesheet" th:href="@{/style/bulma.min.css}"/>
+        <link rel="stylesheet" th:href="@{/fontawesome/css/all.css}">
+        <link rel="stylesheet" th:href="@{/style/swiper.min.css}"/>
+        <link rel="stylesheet" th:href="@{/style/site.css}"/>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" style="border-bottom: 1px solid #CCC;">
+                <div class="container column is-paddingless">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="/">
+                            <img src="https://trisluv.blob.core.windows.net/attachment/logo_new_1587618285155.png" style="max-height:3rem;margin-right: 15px">
+                        </a>
+
+                        <div class="navbar-item is-hidden-tablet is-hidden-desktop" style="padding-left:27px;margin-left: auto">
+                            <a style="color: #ff5f6d" href="tel:0985524213">
+                                <span class="fa fa-2x fa-phone-volume"></span>
+                            </a>
+                        </div>
+
+                        <div class="navbar-item is-hidden-tablet is-hidden-desktop">
+                            <a href="/order" style="color: #ff5f6d" class="shopCart">
+                                <i class="fa fa-2x fa-shopping-cart"></i>
+                                <span class="currentCart"></span>
+                            </a>
+                        </div>
+
+                        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                        </a>
+
+                    </div>
+
+                    <div id="navbarBasicExample" class="navbar-menu">
+                        <div class="navbar-start">
+                            <div class="navbar-item has-dropdown is-hoverable">
+                                <a href="/den-go" class="navbar-link" style="padding-right:.75rem">
+                                    ĐÈN GỖ
+                                    <svg class="drop-menu-icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M19.71,9.29,18.29,7.88,12,14.17,5.7,7.88,4.29,9.3,12,17Z"></path>
+                                    </svg>
+                                </a>
+                                <div class="navbar-dropdown">
+                                    <a href="/den-tran" class="navbar-item">ĐÈN TREO TRẦN</a>
+                                    <a href="/den-ban" class="navbar-item">ĐÈN ĐỂ BÀN</a>
+                                    <a href="/den-goc-tuong" class="navbar-item">ĐÈN GÓC TƯỜNG</a>
+                                    <a href="/den-op-tuong" class="navbar-item">ĐÈN ỐP TƯỜNG</a>
+                                    <a href="/den-3d" class="navbar-item">ĐÈN 3D</a>
+                                    <a href="/op-tuong-2d" class="navbar-item">ỐP TƯỜNG 2D</a>
+                                </div>
+                            </div>
+                            <a class="navbar-item" href="/news/all">TIN TỨC</a>
+                            <a class="navbar-item" href="/contact">LIÊN HỆ</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section id="content">
+            <div id="breadcrumb" layout:fragment="breadcrumb"></div>
+            <div id="main" layout:fragment="main"></div>
+        </section>
+
+        <footer id="footer">
+            <div class="container column">
+                <br/>
+                <br/>
+                <div class="columns">
+                    <div class="column is-4 is-12-mobile">
+                    </div>
+
+                    <div class="column column is-4 is-12-mobile about">
+                    </div>
+
+                    <div class="column column is-4 is-12-mobile">
+                    </div>
+
+                </div>
+
+                <div class="column">
+                    <p>2020 - Designed by Phạm Đức Minh</p>
+                </div>
+
+            </div>
+        </footer>
+        <div id="overlay" style="display:none;z-index: 1000">
+            <div class="spinner"></div>
+            <br/>
+            Loading...
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" th:src="@{/script/jquery.bootstrap-touchspin.js}"></script>
+        <script type="text/javascript" th:src="@{/script/swiper.min.js}"></script>
+        <script type="text/javascript" th:src="@{/script/global.js}"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/igorlino/elevatezoom-plus/1.1.6/src/jquery.ez-plus.js"></script>
+        <script>
+
+        </script>
+        <script layout:fragment="script"></script>
+    </body>
+</html>

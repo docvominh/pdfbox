@@ -1,0 +1,133 @@
+.attachment-area {
+    border: 1px dashed #c1c7d0;
+    padding: 5px;
+    display: block !important;
+    box-sizing: border-box;
+    position: relative;
+}
+
+label[for=uploadAttachment] {
+    border: 1px solid #33a7f3;
+    background-color: #4099ff;
+    color: #fff;
+}
+
+#uploadAttachment {
+    display: none;
+}
+
+#attachmentArea {
+    display: block;
+    padding-top: 10px;
+    min-height: 100px;
+}
+
+#attachmentArea > div {
+    display: inline-block;
+    margin-bottom: 2px;
+    margin-right: 5px;
+    width: 96px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#attachmentArea > div > img,
+#attachmentArea > div > a > img {
+    display: block;
+    cursor: pointer;
+    height: 96px;
+    width: 96px;
+}
+
+#attachmentArea > div > a {
+    font-size: 13px;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #000000;
+}
+
+#attachmentContextMenu {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    background-color: #fff;
+}
+
+#attachmentContextMenu ul {
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #dbdbdb;
+    border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+}
+
+#attachmentContextMenu ul li {
+    list-style: none;
+    padding: 7px;
+    border-bottom: 1px solid #dbdbdb;
+    cursor: pointer;
+}
+
+#attachmentContextMenu ul li:hover {
+    background-color: #eb7c2d;
+    color: #fff;
+}
+
+
+.image-box-overlay {
+    background-color: rgb(119, 119, 119);
+    opacity: 0.7;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1100;
+    display: none;
+}
+
+.image-box-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    z-index: 1101;
+    outline: none;
+    display: none;
+}
+
+#imageViewBox {
+    /*border-width: 10px;*/
+    max-width: 80vw;
+    max-height: 80vh;
+
+    padding: 0;
+    outline: none;
+    position: relative;
+    z-index: 1102;
+    border: 10px solid #fff;
+}
+
+.image-box-close {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    width: 30px;
+    height: 30px;
+    background: transparent url(/images/fancy_close.png);
+    cursor: pointer;
+    z-index: 1103;
+}
+
+#imageViewBox img {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    line-height: 0;
+    vertical-align: top;
+}
